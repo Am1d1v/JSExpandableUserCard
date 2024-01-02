@@ -5,4 +5,59 @@
     padding: 0
     margin: 0
 
-       
+body
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #713386
+
+.card
+    position: relative
+    width: 350px
+    height: 85px
+    background-color: #192a56
+    border-radius: 20px
+    transition: 0.5s
+    &-toggle
+        position: absolute
+        width: 60px
+        height: 60px
+        background-color: #192a56
+        bottom: -60px
+        left: 50%
+        transform: translateX(-50%)
+        border-bottom-left-radius: 50%
+        border-bottom-right-radius: 50%
+        cursor: pointer
+        &::before
+            content: ''
+            position: absolute
+            width: 35px
+            height: 35px
+            background-color: transaparent
+            left: -35px  
+            border-top-right-radius: 35px
+            box-shadow: 11px -10px 0 10px #192a56
+            z-index: 5
+        &::after
+            content: ''
+            position: absolute
+            width: 35px
+            height: 35px
+            background-color: transaparent
+            right: -35px  
+            border-top-left-radius: 35px
+            box-shadow: -11px -10px 0 10px #192a56
+            z-index: 5
+        span
+            position: absolute
+            width: 10px
+            height: 10px
+            border-bottom: 3px solid #fff
+            border-right: 3px solid #fff
+            top: 25px
+            left: 50%
+            transform: translateX(-50%) rotateZ(45deg)
+            z-index: 10
+
